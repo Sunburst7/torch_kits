@@ -29,7 +29,7 @@ class ModelInfo():
         return profile_macs(self.model, self.x)
 
     def get_model_flops(self) -> int:
-        return 2 * self.get_model_macs(self.model, self.x)
+        return 2 * self.get_model_macs()
 
     def __str__(self) -> str:
-        return f"Param: {self.get_model_param_count() / MiB} MiB, Flops: {self.get_model_flops() / 1e6} M"
+        return f"Param: {self.get_model_param_count() / MiB: .4f} MiB, Flops: {self.get_model_flops() / 1e6: .4f} M"
