@@ -1,5 +1,2 @@
-from .model_info import ModelInfo
+from .model_info import *
 from .kfold import *
-from .train import *
-from .eval import *
-from .plot import *
